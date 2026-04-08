@@ -7,7 +7,10 @@
 extern Aetherion::Application* Aetherion::CreateApplication();
 
 int main(int argc, int** argv) {
-	std::cout << "Aetherion Enginer\n";
+	Aetherion::Log::Init();
+	ATH_CORE_WARN("Hello");
+	ATH_INFO("Hello! Var={0}", 5);
+
 	auto app = Aetherion::CreateApplication();
 	app->Run();
 	delete app;

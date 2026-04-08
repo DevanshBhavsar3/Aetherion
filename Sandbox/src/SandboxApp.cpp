@@ -1,4 +1,5 @@
 #include <Aetherion.h>
+#include <iostream>
 
 class Sandbox: public Aetherion::Application {
 public:

@@ -1,0 +1,3 @@
+[submodule "Aetherion/vendor/spdlog"]
+	path = Aetherion/vendor/spdlog
+	url = https://github.com/gabime/spdlog

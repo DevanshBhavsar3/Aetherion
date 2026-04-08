@@ -12,5 +12,6 @@ namespace Aetherion {
 		void Run();
 	};
 
+	// Called by clients
 	Application* CreateApplication();
 }

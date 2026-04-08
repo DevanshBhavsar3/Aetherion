@@ -2,6 +2,6 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="Aetherion/Aetherion.vcxproj" />
-  <Project Path="Sandbox/Sandbox.vcxproj" />
+  <Project Path="Aetherion/Aetherion.vcxproj" Id="918d7200-ade9-456f-a082-8913396d8bf0" />
+  <Project Path="Sandbox/Sandbox.vcxproj" Id="ebead4b7-7391-4567-939e-29b26c8fe07f" />
 </Solution>
