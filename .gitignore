@@ -3,6 +3,9 @@
 bin/
 intermediates/
 
-# User files
-*.user
-
+# Visual Studio
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.slnx
