@@ -4,6 +4,9 @@
     <Filter Include="Aetherion">
       <UniqueIdentifier>{043D0E97-70A7-C20D-B9E5-73B3258FA062}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Aetherion\Events">
+      <UniqueIdentifier>{689C8487-5495-A3D9-7DC7-885E691F83E5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Aetherion.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Aetherion\EntryPoint.h">
       <Filter>Aetherion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aetherion\Events\ApplicationEvent.h">
+      <Filter>Aetherion\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aetherion\Events\Event.h">
+      <Filter>Aetherion\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aetherion\Events\KeyEvent.h">
+      <Filter>Aetherion\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aetherion\Events\MouseEvent.h">
+      <Filter>Aetherion\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Aetherion\Log.h">
       <Filter>Aetherion</Filter>
