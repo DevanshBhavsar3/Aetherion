@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Aetherion {
 
 	class AETHERION_API MouseMovedEvent : public Event {

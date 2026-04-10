@@ -11,6 +11,12 @@ workspace "Aetherion"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDirs = {}
+IncludeDirs["spdlog"] = "Aetherion/vendor/spdlog/include"
+IncludeDirs["GLFW"] = "Aetherion/vendor/GLFW/include"
+
+include "Aetherion/vendor/GLFW"
+
 project "Aetherion"
 	location "Aetherion"
 	kind "SharedLib"
@@ -19,6 +25,9 @@ project "Aetherion"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("intermediates/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "athpch.h"
+	pchsource "Aetherion/src/athpch.cpp"
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
@@ -26,7 +35,14 @@ project "Aetherion"
 
 	includedirs {
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{IncludeDirs.spdlog}",
+		"%{IncludeDirs.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	buildoptions {
@@ -47,7 +63,7 @@ project "Aetherion"
 			("{MKDIR} ../bin/" .. outputdir .. "/Sandbox/"),
 			("{COPYFILE} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/")
 		}
-      
+
 	filter "configurations:Debug"
 		defines "ATH_DEBUG"
 		symbols "On"
@@ -76,7 +92,7 @@ project "Sandbox"
 
 	includedirs {
 		"Aetherion/src",
-		"Aetherion/vendor/spdlog/include"
+		"%{IncludeDirs.spdlog}"
 	}
 	
 	links {
@@ -95,7 +111,7 @@ project "Sandbox"
 		defines {
 			"ATH_PLATFORM_WINDOWS"
 		}
-      
+
 	filter "configurations:Debug"
 		defines "ATH_DEBUG"
 		symbols "On"

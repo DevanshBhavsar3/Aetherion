@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Aetherion {
 
 	class AETHERION_API KeyEvent : public Event {

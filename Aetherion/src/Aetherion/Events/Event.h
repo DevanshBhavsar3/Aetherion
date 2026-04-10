@@ -1,9 +1,7 @@
 #pragma once
 
+#include "athpch.h"
 #include "Aetherion/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Aetherion {
 

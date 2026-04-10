@@ -34,6 +34,9 @@
     <ClInclude Include="src\Aetherion\Log.h">
       <Filter>Aetherion</Filter>
     </ClInclude>
+    <ClInclude Include="src\athpch.h" />
+    <ClInclude Include="src\Aetherion\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Aetherion\Application.cpp">
@@ -42,5 +45,7 @@
     <ClCompile Include="src\Aetherion\Log.cpp">
       <Filter>Aetherion</Filter>
     </ClCompile>
+    <ClCompile Include="src\athpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

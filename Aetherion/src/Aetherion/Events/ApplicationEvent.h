@@ -1,9 +1,6 @@
 #pragma once
 
 #include "Event.h"
-#include "Aetherion/Core.h"
-
-#include <sstream>
 
 namespace Aetherion {
 
