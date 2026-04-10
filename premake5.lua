@@ -65,7 +65,11 @@ project "Aetherion"
 		}
 
 	filter "configurations:Debug"
-		defines "ATH_DEBUG"
+		defines {
+			"ATH_DEBUG",
+			"ATH_ENABLE_ASSERTS"
+		}
+
 		symbols "On"
 
 	filter "configurations:Release"
@@ -113,7 +117,10 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
-		defines "ATH_DEBUG"
+		defines {
+			"ATH_DEBUG",
+			"ATH_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"

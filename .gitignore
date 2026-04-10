@@ -3,9 +3,7 @@
 bin/
 intermediates/
 
-# Visual Studio
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
+# Visual Studio clutter
+*.vcxproj*
 *.sln
 *.slnx
