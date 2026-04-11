@@ -69,15 +69,17 @@ project "Aetherion"
 			"ATH_DEBUG",
 			"ATH_ENABLE_ASSERTS"
 		}
-
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "ATH_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ATH_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 
@@ -121,12 +123,15 @@ project "Sandbox"
 			"ATH_DEBUG",
 			"ATH_ENABLE_ASSERTS"
 		}
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "ATH_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ATH_DIST"
+		buildoptions "/MD"
 		optimize "On"

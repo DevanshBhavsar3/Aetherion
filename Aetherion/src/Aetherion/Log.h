@@ -24,11 +24,11 @@ namespace Aetherion {
 #define ATH_CORE_WARN(...)   Aetherion::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define ATH_CORE_INFO(...)   Aetherion::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define ATH_CORE_TRACE(...)  Aetherion::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define ATH_CORE_FATAL(...)  Aetherion::Log::GetCoreLogger()->fatal (__VA_ARGS__)
+#define ATH_CORE_FATAL(...)  Aetherion::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
 // Client Log Macros
 #define ATH_ERROR(...)       Aetherion::Log::GetClientLogger()->error(__VA_ARGS__)
 #define ATH_WARN(...)        Aetherion::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define ATH_INFO(...)        Aetherion::Log::GetClientLogger()->info(__VA_ARGS__)
 #define ATH_TRACE(...)       Aetherion::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define ATH_FATAL(...)       Aetherion::Log::GetClientLogger()->fatal (__VA_ARGS__)
+#define ATH_FATAL(...)       Aetherion::Log::GetClientLogger()->fatal(__VA_ARGS__)
