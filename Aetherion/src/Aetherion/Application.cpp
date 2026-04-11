@@ -2,6 +2,7 @@
 #include "Application.h"
 
 #include <GLFW/glfw3.h>
+#include <glad/gl.h>
 
 namespace Aetherion {
 	#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)

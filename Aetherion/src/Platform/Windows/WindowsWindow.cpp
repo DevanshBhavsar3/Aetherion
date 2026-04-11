@@ -5,6 +5,8 @@
 #include "Aetherion/Events/KeyEvent.h"
 #include "Aetherion/Events/MouseEvent.h"
 
+#include <glad/gl.h>
+
 namespace Aetherion {
 
 	static bool s_GLFWInitialized = false;
@@ -41,6 +43,8 @@ namespace Aetherion {
 
 		m_Window = glfwCreateWindow(props.Width, props.Height, props.Title.c_str(), NULL, NULL);
 		glfwMakeContextCurrent(m_Window);
+		int version = gladLoadGL(glfwGetProcAddress);
+		ATH_CORE_ASSERT(version != 0, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDirs = {}
 IncludeDirs["spdlog"] = "Aetherion/vendor/spdlog/include"
 IncludeDirs["GLFW"] = "Aetherion/vendor/GLFW/include"
+IncludeDirs["Glad"] = "Aetherion/vendor/Glad/include"
 
 include "Aetherion/vendor/GLFW"
+include "Aetherion/vendor/Glad"
 
 project "Aetherion"
 	location "Aetherion"
@@ -36,11 +38,13 @@ project "Aetherion"
 	includedirs {
 		"%{prj.name}/src",
 		"%{IncludeDirs.spdlog}",
-		"%{IncludeDirs.GLFW}"
+		"%{IncludeDirs.GLFW}",
+		"%{IncludeDirs.Glad}"
 	}
 
 	links {
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
@@ -56,7 +60,8 @@ project "Aetherion"
 
 		defines {
 			"ATH_PLATFORM_WINDOWS",
-			"ATH_BUILD_DLL"
+			"ATH_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands {
